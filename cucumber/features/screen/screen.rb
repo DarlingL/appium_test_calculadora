@@ -73,7 +73,7 @@ class ScreenCadastroSteps
 
     #Scrolar para baixo
     def swipedown
-        scroll_to_exact('CALCULAR')
+        scroll_to('CALCULAR')
         swipe(start_x: 0.2, start_y: 0.2, offset_x:0.1,  offset_y: 4.5, duration: 600).perform       
     end 
 

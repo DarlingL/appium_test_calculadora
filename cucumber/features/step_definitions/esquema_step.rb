@@ -1,6 +1,6 @@
 Dado("que esteja na tela Inicial") do
   @cad = ScreenCadastroSteps.new
-  find_element(:xpath, "//*[@text='Resultado']").displayed?
+  find_element(:xpath, "//*[@text='Nota 1:']").displayed?
 end
 
 Quando("preencher as notas {string} {string} {string} e calcular") do |string, string2, string3|
