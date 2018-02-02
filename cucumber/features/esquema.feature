@@ -8,7 +8,7 @@ para saber se foi aprovado
 Contexto:
 Dado que esteja na tela Inicial
 
-@test1
+@test3
 Esquema do Cenario: Verificar situação inserindo notas por esquema de cenário
 Quando preencher as notas "<n1>" "<n2>" "<n3>" e calcular
 Entao deve exibir a mensagem de "<resultado>".
@@ -22,7 +22,7 @@ Cenario: Verificar situação inserindo notas por teclado android
 Quando preencher as notas e calcular
 Entao deve exibir a mensagem de "Aprovado".
 
-@test3
+@test1
 Cenario: Verificar situação após ler Push
 Quando preencher as notas e ler Push
 E calcular

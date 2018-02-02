@@ -1,9 +1,9 @@
 [caps]
 platformName = "android"
 deviceName = "mobile3"
-udid = "emulator-5554"
+udid = "emulator-5558"
 app = "../package/calculadora.apk"
 
 
 [appium_lib]
-port = "4723"
+port = "4725"

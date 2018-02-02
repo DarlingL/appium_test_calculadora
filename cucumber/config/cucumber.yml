@@ -3,8 +3,8 @@
 ---
 mobile1: ADEVICENAME='mobile1'
 mobile2: ADEVICENAME='mobile2'
-mobile2: ADEVICENAME='mobile3'
-mobile2: ADEVICENAME='mobile4'
+mobile3: ADEVICENAME='mobile3'
+mobile4: ADEVICENAME='mobile4'
 
 default: -p html_report -p chrome -p dev
 html_report: --format progress --format html --out=features_report.html

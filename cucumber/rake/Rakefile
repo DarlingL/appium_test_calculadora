@@ -1,0 +1,14 @@
+require "cucumber"
+require "cucumber/rake/task"
+
+task :appium do
+  exec ("openappium.bat")
+end
+task :tests do
+  exec ("runtest.bat")
+end
+
+
+
+
+
