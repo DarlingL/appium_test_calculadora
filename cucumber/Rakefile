@@ -1,0 +1,72 @@
+require "cucumber"
+require "cucumber/rake/task"
+require "open3"
+
+
+@success = true
+
+task :appium do
+  exec ("openappium.bat")
+end
+task :tests do
+  exec ("runtest.bat")
+end
+
+task :test1 do
+  puts " Start Appium 1,"
+  command1 = "appium -p 4723 -bp 2251"
+  Open3::popen3(command1)
+  sleep 20
+  puts " Start Tests 1"
+  command5 = "cucumber -p mobile1 --tags @test1 -f html -o ./reports/mobile1.html"
+  Open3::popen3(command5)
+  sleep 120
+end
+
+
+task :test2 do
+  puts " Start Appium 2,"
+  command2 = "appium -p 4724 -bp 2252"
+  Open3::popen3(command2)
+  sleep 20
+  puts " Start Tests 2"
+  command6 = "cucumber -p mobile2 --tags @test3 -f html -o ./reports/mobile2.html"
+  Open3::popen3(command6)
+  sleep 120
+end
+
+
+task :test3 do
+  puts " Start Appium 3,"
+  command3 = "appium -p 4725 -bp 2253"
+  Open3::popen3(command3)
+  sleep 20
+  puts " Start Tests 3"
+  command7 = "cucumber -p mobile3 --tags @test2 -f html -o ./reports/mobile3.html"
+  Open3::popen3(command7)
+  sleep 120
+end
+
+
+
+task :test4 do
+  puts " Start Appium 4"
+  command4 = "appium -p 4726 -bp 2254"
+  Open3::popen3(command4)
+  sleep 20
+  puts " Start Tests 4"
+  command8 = "cucumber -p mobile4 --tags @test4 -f html -o ./reports/mobile4.html"
+  Open3::popen3(command8)
+  sleep 120
+
+end
+
+
+multitask :all_test => [
+  :test1,
+  :test2,
+  :test3,
+  :test4
+ ] do
+ raise StandardError, "Tests failed!" unless @success
+ end
